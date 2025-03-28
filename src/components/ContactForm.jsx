@@ -43,21 +43,25 @@ const validationSchema = Yup.object({
       validationSchema={validationSchema}
       onSubmit={handleSubmit}
     >
-      <Form className={css.form}>
-        <label>
-          Ім’я:
-          <Field type="text" name="name" />
-          <ErrorMessage name="name" component="div" className={css.error} />
-        </label>
+      {({ isValid, dirty }) => (
+        <Form className={css.form}>
+          <label>
+            Ім’я:
+            <Field type="text" name="name" />
+            <ErrorMessage name="name" component="div" className={css.error} />
+          </label>
 
-        <label>
-          Номер:
-          <Field type="text" name="number" />
-          <ErrorMessage name="number" component="div" className={css.error} />
-        </label>
+          <label>
+            Номер:
+            <Field type="text" name="number" />
+            <ErrorMessage name="number" component="div" className={css.error} />
+          </label>
 
-        <button type="submit">Додати контакт</button>
-      </Form>
+          <button type="submit" disabled={!(isValid && dirty)}>
+            Додати контакт
+          </button>
+        </Form>
+      )}
     </Formik>
   );
 };

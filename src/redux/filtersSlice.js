@@ -6,7 +6,7 @@ const filtersSlice = createSlice({
   },
   reducers: { //функція, яка змінює стан
     changeFilter: function (state, action) {
-      state.name = action.payload;               //отримує action.payload (тобто, те, що передаємо) і записує це у state.name
+      state.name = action.payload;               // оновлює name на значення, яке приходить в action.payload (тобто — новий текст фільтра).
     },
   },
 });

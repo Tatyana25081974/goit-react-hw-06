@@ -1,0 +1,74 @@
+/* App.module.css */
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Wrapper — розміщує ліву та праву частини в ряд */
+.wrapper {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Ліва частина: заголовок + форма */
+.leftSide {
+    flex: 1;
+    min-width: 320px;
+    max-width: 400px;
+}
+
+/* Права частина: фільтр + список */
+.rightSide {
+    flex: 2;
+    min-width: 400px;
+}
+
+/* Заголовок */
+.title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+/* Форма в картці */
+.card {
+    border: 2px solid orangered;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Підзаголовок */
+.subtitle {
+    font-size: 20px;
+    margin: 16px 0 10px;
+    color: #333;
+}
+
+/* Адаптив для менших екранів */
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .leftSide,
+    .rightSide {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .title {
+        text-align: center;
+    }
+}

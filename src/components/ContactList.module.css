@@ -1,0 +1,13 @@
+/* ContactList.module.css */
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    /* адаптивна сітка */
+    gap: 16px;
+    padding: 0;
+    margin-top: 20px;
+    list-style: none;
+    max-width: 100%;
+}
+
