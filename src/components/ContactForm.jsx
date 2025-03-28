@@ -18,7 +18,9 @@ const validationSchema = Yup.object({
     number: Yup.string()
       .min(5, 'Мінімум 5 символів')
       .max(20, 'Максимум 20 символів')
-      .required("Обов'язково"),
+    
+    .matches(/^\d{3}-\d{2}-\d{2}$/, 'Формат: 123-45-67')
+    .required("Обов'язково"),
 });
   // Початкові значення
   const initialValues = {
